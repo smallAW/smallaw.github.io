@@ -14,7 +14,7 @@
 
 还有一个神奇的网站->[online.luogu.cn](https://online.luogu.cn)
 
-再次牛逼->[oj.luogu.com](http://oj.luogu.com/)
+再次牛逼->[oj.luogu.cn](http://oj.luogu.cn/)
 
 甚至还有[sb.luogu.cn/](https://sb.luogu.cn/)
 
