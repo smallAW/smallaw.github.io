@@ -18,4 +18,8 @@
 
 [洛谷](https://www.luogu.com.cn/user/685153)
 
+### 一个好玩的页面
+
+[一个好玩的页面](http://lvmaojun.com/huaji/)
+
 # 终
