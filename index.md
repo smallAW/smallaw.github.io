@@ -2,6 +2,10 @@
 
 ## 这里是smallAW
 
+### 博客首页
+
+[博客首页](https://smallaw.github.io/blog)
+
 ### 在线玩谷歌小恐龙
 
 [Link](https://smallaw.github.io/114514)
