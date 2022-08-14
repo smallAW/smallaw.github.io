@@ -26,4 +26,4 @@
 
 ###### ~~个鬼~~
 
-###### [简单的A+B]()
+###### [简单的A+B](https://smallaw.github.io/easyAB)
