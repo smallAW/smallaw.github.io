@@ -36,4 +36,4 @@ favicon: https://smallaw.github.io/images/logo.ico
 
 ###### ~~个鬼~~
 
-###### [简单的A+B](https://smallaw.github.io/easyAB)
+###### [简单的A+B](https://smallaw.github.io/blog/easyAB)
