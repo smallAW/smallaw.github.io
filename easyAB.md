@@ -1,3 +1,7 @@
+---
+title: 简单的A+B
+---
+
 # 此文章~~借鉴~~抄袭于[https://www.luogu.com.cn/paste/zzmnwrb4](https://www.luogu.com.cn/paste/zzmnwrb4)
 
 ### 关于 $A + B$ 这道连大（cai）佬（niao）都做不（de）出的难（shui）题
