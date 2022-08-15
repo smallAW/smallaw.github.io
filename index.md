@@ -1,5 +1,6 @@
 ---
 title: 主页
+favicon: https://smallaw.github.io/images/logo.ico
 ---
 
 
