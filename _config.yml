@@ -1,4 +1,4 @@
-remote_theme: just-the-docs/just-the-docs
+remote_theme: chrisrhymes/bulma-clean-theme
 title: smallAW's Blog
 logo: "https://smallaw.github.io/images/logo.ico"
 # Color scheme supports "light" (default) and "dark"
