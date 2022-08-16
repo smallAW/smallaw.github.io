@@ -12,12 +12,11 @@ title: 简单的A+B
 ```cpp
 #include <iostream>
 using namespace std;
-
-long long a , b;
-
-int main(void){
+long long a, b;
+int main()
+{
 	cin.tie(0);
-  	cout.tie(0);
+	cout.tie(0);
 	cin >> a >> b;
 	cout << a + b;
 	return 0;
@@ -30,12 +29,11 @@ int main(void){
 #include <iostream>
 #include <cmath>
 using namespace std;
-
-long long a , b;
-
-int main(void){
+long long a, b;
+int main()
+{
 	cin >> a >> b;
-	cout << (a + b) * ((long long)(abs(a - b)) + 1) / 2 - (a + b) * ((long long)(abs(a - b)) - 1) /  2;
+	cout << (a + b) * ((long long)(abs(a - b)) + 1) / 2 - (a + b) * ((long long)(abs(a - b)) - 1) / 2;
 	return 0;
 }
 ```
@@ -46,51 +44,57 @@ int main(void){
 #define lowbit(x) (x) & (-x)
 #define ll long long
 using namespace std;
-
-ll N , a , b;
+ll N, a, b;
 ll qwq[5];
-
-inline ll read(){
-    ll x = 0;
+inline ll read()
+{
+	ll x = 0;
 	int f = 1;
-    char ch = getchar();
-    while(ch < '0' || ch > '9'){
-        if(ch == '-')
-            f = -1;
-        ch = getchar();
-    }
-    while(ch >= '0' && ch <= '9'){
-        x = (x << 1) + (x << 3) + (ch ^ 48);
-        ch = getchar();
-    }
-    return x * f;
+	char ch = getchar();
+	while (ch < '0' || ch > '9')
+	{
+		if (ch == '-')
+			f = -1;
+		ch = getchar();
+	}
+	while (ch >= '0' && ch <= '9')
+	{
+		x = (x << 1) + (x << 3) + (ch ^ 48);
+		ch = getchar();
+	}
+	return x * f;
 }
 
-void add(int i , ll k){
-	//第 i 位置上加上 k 
-	while(i <= N){
+void add(int i, ll k)
+{
+	//第 i 位置上加上 k
+	while (i <= N)
+	{
 		qwq[i] += k;
 		i += lowbit(i);
 	}
 }
 
-ll getsum(int i){
+ll getsum(int i)
+{
 	//求 qwq[1 ~ i] 的和
 	ll rrr = 0;
-	while(i){
+	while (i)
+	{
 		rrr += qwq[i];
 		i -= lowbit(i);
 	}
 	return rrr;
 }
 
-int main(void){
+int main(void)
+{
 	N = 3;
 	a = read();
 	b = read();
-	add(1 , a);
-	add(2 , b);
-	printf("%lld\n" , getsum(2));
+	add(1, a);
+	add(2, b);
+	printf("%lld\n", getsum(2));
 }
 ```
 
@@ -100,49 +104,56 @@ int main(void){
 #include <cstdio>
 using namespace std;
 
-struct QWQ{
-	int s[5005]; //s[0] = len
-	
-	void read(){
+struct Bignum
+{
+	int s[5005]; // s[0] = len
+
+	void read()
+	{
 		string in;
 		cin >> in;
 		s[0] = in.size();
-		for(int i = 1;i <= s[0];i++)
+		for (int i = 1; i <= s[0]; i++)
 			s[i] = in[s[0] - i] - '0';
 	}
-	
-	void print(string end = ""){
-		for(int i = s[0];i >= 1;i--)
+
+	void print(string end = "")
+	{
+		for (int i = s[0]; i >= 1; i--)
 			cout << s[i];
 		cout << end;
 	}
-	
-	QWQ operator + (QWQ &b){
-		QWQ c;
-		int len = max(s[0] , b.s[0]);
-		int i = 1 , x = 0;
-		for(;i <= len;i++){
+
+	Bignum operator+(Bignum &b)
+	{
+		Bignum c;
+		int len = max(s[0], b.s[0]);
+		int i = 1, x = 0;
+		for (; i <= len; i++)
+		{
 			c.s[i] = s[i] + b.s[i] + x;
 			x = c.s[i] / 10;
 			c.s[i] %= 10;
 		}
-		if(x == 0)
+		if (x == 0)
 			i--;
 		else
 			c.s[i] = x;
 		c.s[0] = i;
 		return c;
 	}
-	
-	QWQ operator = (QWQ b){
-		for(int i = 0;i <= b.s[0];i++)
+
+	Bignum operator=(Bignum b)
+	{
+		for (int i = 0; i <= b.s[0]; i++)
 			s[i] = b.s[i];
 		return *this;
 	}
 };
 
-int main(void){
-	QWQ a , b , c;
+int main(void)
+{
+	Bignum a, b, c;
 	a.read();
 	b.read();
 	c = a + b;
@@ -158,14 +169,14 @@ int main(void){
 #define My_name_is_sb std
 #define __ int
 #define ___ main
-#define ____ void
 #define _____ return
 #define ______ cin
 #define _______ cout
 
-QWQ awdrg , sefth;
+QWQ awdrg, sefth;
 
-__ ___(____){
+__ ___()
+{
 	My_name_is_sb::______ >> awdrg >> sefth;
 	My_name_is_sb::_______ << awdrg + sefth;
 	_____ 0;
@@ -225,7 +236,6 @@ __ ___(____){
 #pragma GCC optimize("-funsafe-loop-optimizations")
 #pragma GCC optimize("inline-functions-called-once")
 #pragma GCC optimize("-fdelete-null-pointer-checks")
-#include <bits/stdc++.h>
 #include <algorithm>
 #include <bitset>
 #include <cctype>
@@ -275,36 +285,44 @@ __ ___(____){
 #include <utility>
 #include <valarray>
 #include <vector>
+//不要问我为什么没有万能头
 using namespace std;
 
-long long a , b;
+long long a, b;
 
-inline long long read(){
-    long long x = 0;
+inline long long read()
+{
+	long long x = 0;
 	int f = 1;
-    char ch = getchar();
-    while(ch < '0' || ch > '9'){
-        if(ch == '-')
-            f = -1;
-        ch = getchar();
-    }
-    while(ch >= '0' && ch <= '9'){
-        x = (x << 1) + (x << 3) + (ch ^ 48);
-        ch = getchar();
-    }
-    return x * f;
+	char ch = getchar();
+	while (ch < '0' || ch > '9')
+	{
+		if (ch == '-')
+			f = -1;
+		ch = getchar();
+	}
+	while (ch >= '0' && ch <= '9')
+	{
+		x = (x << 1) + (x << 3) + (ch ^ 48);
+		ch = getchar();
+	}
+	return x * f;
 }
 
-void write(long long x) {
-    if(x < 0) {
-        putchar('-'); 
-        x = -x;
-    }
-    if(x > 9) write(x / 10);
-    putchar(x % 10 + '0');
+void write(long long x)
+{
+	if (x < 0)
+	{
+		putchar('-');
+		x = -x;
+	}
+	if (x > 9)
+		write(x / 10);
+	putchar(x % 10 + '0');
 }
 
-int main(void){
+int main()
+{
 	a = read();
 	b = read();
 	write(a + b);
@@ -318,15 +336,17 @@ int main(void){
 using namespace std;
 
 int da_biao[20000][20000];
-int a , b;
+int a, b;
 
-void init(){
-	for(int i = 0;i < 20000;i++)
-		for(int j = 0;j < 20000;j++)
+void init()
+{
+	for (int i = 0; i < 20000; i++)
+		for (int j = 0; j < 20000; j++)
 			da_biao[i][j] = i + j;
 }
 
-int main(void){
+int main()
+{
 	init();
 	cin.tie(0);
 	cout.tie(0);
@@ -335,6 +355,7 @@ int main(void){
 	return 0;
 }
 ```
+
 ## 暴力枚举:
 ```cpp
 #include <cstdio>
@@ -342,16 +363,19 @@ using namespace std;
 
 int a, b;
 
-int main() {
-    scanf("%d%d", &a , &b);
-    for (int i = 0;i <= 100000000;i++){
-    	if (a + b == i){
+int main()
+{
+	scanf("%d%d", &a, &b);
+	for (int i = 0; i <= 100000000; i++)
+	{
+		if (a + b == i)
+		{
 			printf("%d\n", i);
 			break;
 		}
-	}	
-    return 0;
-} 
+	}
+	return 0;
+}
 ```
 
 ## 超级优化：
@@ -361,13 +385,15 @@ int main() {
 using namespace std;
 
 int st = clock();
-int a , b;
+int a, b;
 
-int main(void){
-    cin >> a >> b;
-    while(clock() - st < 999000);
-    cout << a + b;
-    return 0;
+int main()
+{
+	cin >> a >> b;
+	while (clock() - st < 999000)
+		;
+	cout << a + b;
+	return 0;
 }
 ```
 ![AC](https://tdog.oss-cn-hangzhou.aliyuncs.com/together-h5/8h3tQbtJMts8Antk7GPpDCJW2ff3jCxB.png?x-oss-process=image/resize,w_400,limit_0/auto-orient,1)
@@ -380,26 +406,30 @@ int main(void){
 using namespace std;
 
 long long a;
-queue <long long> q;
+queue<long long> q;
 
-inline long long qpow(long long a , int b){
-    long long s = 1;
-    while(b){
-		if(b & 1)
+inline long long qpow(long long a, int b)
+{
+	long long s = 1;
+	while (b)
+	{
+		if (b & 1)
 			s = s * a;
 		a = a * a;
 		b >>= 1;
 	}
-    return s;
+	return s;
 }
 
-int main(void){
-	scanf("%lld" , &a);
-	q.push(qpow(a , 1));
-	scanf("%lld" , &a);
-	q.push(q.front() + qpow(a , 1));
+int main()
+{
+	scanf("%lld", &a);
+	q.push(qpow(a, 1));
+	scanf("%lld", &a);
+	q.push(q.front() + qpow(a, 1));
 	q.pop();
-	printf("%lld\n" , q.front());
+	printf("%lld\n", q.front());
+	return 0;
 }
 ```
 
@@ -409,23 +439,26 @@ int main(void){
 #include <cmath>
 using namespace std;
 
-long long a , b , ans = -0x7ffffff;
+long long a, b, ans = -0x7ffffff;
 
-void digui(long long l , long long r){
+void digui(long long l, long long r)
+{
 	long long mid = (l + r) >> 1;
-	if(abs(mid - a - b) < 1)
+	if (abs(mid - a - b) < 1)
 		ans = mid;
-	else if(mid < (a + b))
-		digui(mid + 1 , r);
+	else if (mid < (a + b))
+		digui(mid + 1, r);
 	else
-		digui(l , mid - 1);
+		digui(l, mid - 1);
 }
 
-int main(void){
+int main()
+{
 	cin.tie(0);
 	cin >> a >> b;
-	digui(1 , a + b + 1);
-	printf("%d\n" , ans);
+	digui(1, a + b + 1);
+	printf("%d\n", ans);
+	return 0;
 }
 ```
 
@@ -433,18 +466,21 @@ int main(void){
 ```cpp
 #include <cstdio>
 
-long long m , n;
+long long m, n;
 
-int main(void){
-    scanf("%lld%lld", &m, &n);
-    long long u = m & n;
-    long long v = m ^ n;
-    while (u) {
-        long long s = v;
-        long long t = u << 1;
-        u = s & t;
-        v = s ^ t;
-    }
-    printf("%lld\n", v);
+int main()
+{
+	scanf("%lld%lld", &m, &n);
+	long long u = m & n;
+	long long v = m ^ n;
+	while (u)
+	{
+		long long s = v;
+		long long t = u << 1;
+		u = s & t;
+		v = s ^ t;
+	}
+	printf("%lld\n", v);
+	return 0;
 }
 ```
