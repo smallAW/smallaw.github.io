@@ -6,4 +6,4 @@
 或者你可以看看我的更高级博客
 >> 1.[oier.space](https://smallaw.oier.space/)
 
->> 2.[洛谷博客](null)(可是停运了，你会再次看到小恐龙)
+>> 2.[洛谷博客](https://www.luogu.com.cn/blog/685153/)
