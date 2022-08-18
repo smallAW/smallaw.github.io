@@ -3,6 +3,8 @@
 文章列表
 > 1.[简单的A+B](https://smallaw.github.io/blog/easyAB)
 
+> 2.[高精度模板](https://smallaw.github.io/blog/Bignum)
+
 或者你可以看看我的更高级博客
 > 1.[oier.space](https://smallaw.oier.space/)
 
