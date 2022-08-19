@@ -5,6 +5,8 @@
 
 > 2.[高精度模板](https://smallaw.github.io/blog/Bignum)
 
+> 3.[浅谈`goto`](https://smallaw.github.io/blog/cgoto)
+
 或者你可以看看我的更高级博客
 > 1.[oier.space](https://smallaw.oier.space/)
 
