@@ -12,10 +12,6 @@ favicon: https://smallaw.github.io/images/logo.ico
 
 [博客首页](https://smallaw.github.io/blog)
 
-### 在线玩谷歌小恐龙
-
-[Link](https://smallaw.github.io/114514)
-
 ### 给我发邮件
 
 [wxxl551440@gmail.com](https://smallaw.github.io/wxxl551440) 别点，否则会出现不得了的事
