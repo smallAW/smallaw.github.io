@@ -18,7 +18,7 @@
 
 甚至还有[sb.luogu.cn/](https://sb.luogu.cn/)
 
-
+<script src="https://myhkw.cn/api/player/1675507963107" id="myhk" key="1675507963107" m="1"></script>
 # ~~万能洛谷.cn~~
 
 # **终**
