@@ -49,4 +49,19 @@
         <tag>题解</tag>
       </tags>
   </entry>
+  <entry>
+    <title>0x80190001解决方法</title>
+    <url>/2023/09/24/Error-0x80190001/</url>
+    <content><![CDATA[<h1 id="原因以及解法适用"><a href="#原因以及解法适用" class="headerlink" title="原因以及解法适用"></a>原因以及解法适用</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>可能是梯子的原因吧 qwq。</p>
+<h2 id="解法适用"><a href="#解法适用" class="headerlink" title="解法适用"></a>解法适用</h2><p>微软账号登录是显示的错误</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><p><strong>关掉梯子，关掉梯子！</strong></p>
+<p>打开 cmd (win + r 输入 cmd回车)，输入 <code>netsh int ip reset</code> 回车，再输入 <code>netsh winsock reset</code>，然后重启（如果你想快一点的话，<code>shutdown -r -t 0</code>，不用谢我）。</p>
+<p>开梯子而出现的问题大部分应该都解决了。</p>
+<p>实在不行，换个网络（</p>
+<p><del>保留备用</del></p>
+]]></content>
+      <tags>
+        <tag>error</tag>
+      </tags>
+  </entry>
 </search>
